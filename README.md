@@ -17,5 +17,3 @@ docker run --rm \
   -v $PWD/outs:/docs/out \
   codegymlabs/pandoc -i in/hello.md -o out/hello.pdf -V papersize:a4
 ```
-
-docker run --rm -v $PWD:/docs/in -v $PWD/outs:/docs/out codegymlabs/pandoc -i in/hello.md -o out/hello.pdf -V papersize:a4
