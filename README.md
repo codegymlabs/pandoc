@@ -1,5 +1,7 @@
 # Dockerized pandoc executable
 
+Based on [`Debian`](https://store.docker.com/images/debian)`:stable-slim`.
+
 Usage:
 
 ```bash
