@@ -1,6 +1,6 @@
 # Dockerized pandoc executable
 
-Based on [`Debian`](https://store.docker.com/images/debian)`:stretch-slim`.
+Based on [`debian`](https://store.docker.com/images/debian)`:stretch-slim`.
 
 Usage:
 
@@ -8,8 +8,12 @@ Usage:
 docker run --rm \
   -v ${input-file-parent}:/docs \
   -v ${output-file-parent}:/docs/out \
-  codegymlabs/pandoc ${input-file} -o out/${out-put-file} [other agurments]
+  codegymlabs/pandoc:${tag} ${input-file} \
+  -o out/${out-put-file} \
+  [other agurments]
 ```
+
+For html, doc, docx, odt etc outputs, use `core` tag.
 
 For PDF, use `pdf` tag.
 
@@ -29,3 +33,4 @@ docker run --rm \
   -V papersize:a4 \
   --latex-engine=xelatex \
   --dpi=144
+```
